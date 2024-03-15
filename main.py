@@ -87,27 +87,21 @@ team_season_points = full_teams_results_df.groupby('name').apply(calculate_total
 young_players_points = young_players_result.groupby('username').apply(calculate_total_points_sub).sort_values('total_points', ascending=False).reset_index()
 woman_players_points = woman_players_result.groupby('username').apply(calculate_total_points_sub).sort_values('total_points', ascending=False).reset_index()
 
-
-
-
 player_season_points.index = player_season_points.index + 1
 team_season_points.index = team_season_points.index + 1
 young_players_points.index = young_players_points.index + 1
 woman_players_points.index = woman_players_points.index + 1
 
-
 st.title('БНЛ Весна 2024')
 st.title('Командный зачет')
+st.info('4 команды проходят в финал')
 st.dataframe(team_season_points, width=1000)
 st.title('Индивидуальный зачет')
+st.info('20 игроков проходят в финал')
 st.dataframe(player_season_points)
 st.title('Юношеский зачет')
+st.info('16 игроков проходят в финал')
 st.dataframe(young_players_points, width=800)
 st.title('Женский зачет')
+st.info('16 игроков проходят в финал')
 st.dataframe(woman_players_points, width=800)
-
-
-
-
-
-

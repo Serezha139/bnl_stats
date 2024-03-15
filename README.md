@@ -1,2 +1,2 @@
 # bnl_stats
-Streamlit pet project
+Рейтинги и статистика Белорусской Народной Лиги.
