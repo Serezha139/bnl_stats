@@ -92,8 +92,11 @@ team_season_points.index = team_season_points.index + 1
 young_players_points.index = young_players_points.index + 1
 woman_players_points.index = woman_players_points.index + 1
 
+st.set_page_config(
+   page_title="БНЛ Весна 2024",
+   page_icon="♔",
+)
 
-st.sidebar.markdown("# Текущие рейтинги 🏆")
 
 st.title('БНЛ Весна 2024')
 st.title('Командный зачет 🏆')
