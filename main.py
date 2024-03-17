@@ -32,8 +32,12 @@ SMALL_POINTS_MAP = {
     9: 1,
 }
 
+penalty_points = {
+    'FantasticInspiration' : 64
+}
+
 def calculate_total_points(group):
-    total_points = sum(PLAYER_POINTS_MAP.get(place, 0) for place in group['rank'])
+    total_points = sum(PLAYER_POINTS_MAP.get(place, 0) for place in group['rank']) - penalty_points.get(group['username'].values[0], 0)
     return pd.Series({'total_points': total_points, 'team': group['name'].values[0]})
 
 def calculate_total_points_sub(group):
